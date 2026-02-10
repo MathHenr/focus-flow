@@ -2,14 +2,9 @@
 import './styles/global.css';
 import './styles/theme.css';
 
-// component import
-import { Container } from './components/Container';
-import { Logo } from './components/Logo';
+// Main template import
+import { Main } from './template/Main';
 
 export function App() {
-  return (
-    <Container>
-      <Logo />
-    </Container>
-  );
+  return <Main />;
 }
