@@ -2,3 +2,9 @@
   margin: 0.8rem auto;
   max-width: 128rem;
 }
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

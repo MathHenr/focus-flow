@@ -6,11 +6,9 @@ import { BrainIcon } from 'lucide-react';
 
 export function StatusDisplay() {
   return (
-    <div className={style['container-contet']}>
-      <div className={style.content}>
-        <BrainIcon />
-        <p>Focus</p>
-      </div>
+    <div className={style.content}>
+      <BrainIcon />
+      <p>Focus</p>
     </div>
   );
 }
