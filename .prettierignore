@@ -1,0 +1,9 @@
+# Pastas de dependências e build
+node_modules
+dist
+build
+coverage
+
+# Arquivos de configuração que não precisam de formatação
+package-lock.json
+.env
