@@ -12,6 +12,8 @@ export function Main() {
       </Container>
       <Container>
         <StatusDisplay />
+      </Container>
+      <Container>
         <Timer />
       </Container>
     </>
