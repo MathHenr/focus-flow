@@ -3,6 +3,7 @@ import { useTimerContext } from '../../hooks/useTimerContext';
 
 // import function
 import { createCycle } from '../../utils/createCycle';
+import { changeIsActive } from '../../utils/changeIsActive';
 
 // Lucide import
 import { ChevronsRightIcon, EllipsisIcon, PauseIcon, PlayIcon } from 'lucide-react';
@@ -23,7 +24,14 @@ export function Main() {
   }
 
   const startTimer = (): void => {
-    return createCycle({ state, setState });
+    if (state.tasks.length < 1) {
+      return createCycle({ state, setState });
+    }
+    return changeIsActive({ state, setState });
+  };
+
+  const pauseTimer = (): void => {
+    return changeIsActive({ state, setState });
   };
 
   return (
@@ -40,10 +48,20 @@ export function Main() {
       <Container>
         <Button handleClick={handleClick} variant="secondary" icon={EllipsisIcon} />
         {!state.isActive && (
-          <Button handleClick={startTimer} variant="primary" icon={PlayIcon} />
+          <Button
+            key={'start'}
+            handleClick={startTimer}
+            variant="primary"
+            icon={PlayIcon}
+          />
         )}
-        {state.isActive && (
-          <Button handleClick={startTimer} variant="primary" icon={PauseIcon} />
+        {!!state.isActive && (
+          <Button
+            key={'pause'}
+            handleClick={pauseTimer}
+            variant="primary"
+            icon={PauseIcon}
+          />
         )}
         <Button handleClick={handleClick} variant="secondary" icon={ChevronsRightIcon} />
       </Container>
