@@ -11,7 +11,7 @@
 
 .timer span {
   margin-top: -0.3em;
-  font-size: clamp(19.6rem, 25vw, 25.6rem);
+  font-size: clamp(12.8rem, 25vw, 25.6rem);
 }
 
 .paused {
