@@ -19,6 +19,18 @@ export function timerReducer(
         tasks: [action.payload],
       };
     }
+    case TimerActionType.NEXT_TIME: {
+      const secondsRemaining = action.payload.duration * 60;
+      const cycle = getCycle(state.cycle);
+
+      return {
+        ...state,
+        secondsRemaining,
+        cycle,
+        isActive: false,
+        tasks: [action.payload],
+      };
+    }
     case TimerActionType.PAUSE_TIME: {
       return {
         ...state,
