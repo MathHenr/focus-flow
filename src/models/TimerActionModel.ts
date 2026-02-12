@@ -5,11 +5,12 @@ export enum TimerActionType {
   PAUSE_TIME = 'PAUSE_TIME',
   PLAY_TIME = 'PLAY_TIME',
   UPDATE_TIME = 'UPDATE_TIME',
+  NEXT_TIME = 'NEXT_TIME',
 }
 
 export type TimerActionModel =
   | {
-      type: TimerActionType.START_TIME;
+      type: TimerActionType.START_TIME | TimerActionType.NEXT_TIME;
       payload: TimerModel;
     }
   | {
