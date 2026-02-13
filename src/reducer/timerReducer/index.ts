@@ -48,6 +48,9 @@ export function timerReducer(
         isActive: secondsRemaining === 0 ? false : state.isActive,
       };
     }
+    case TimerActionType.BG_THEME: {
+      return state;
+    }
   }
 
   return state;

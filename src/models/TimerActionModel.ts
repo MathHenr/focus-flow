@@ -6,6 +6,7 @@ export enum TimerActionType {
   PLAY_TIME = 'PLAY_TIME',
   UPDATE_TIME = 'UPDATE_TIME',
   NEXT_TIME = 'NEXT_TIME',
+  BG_THEME = 'BG_THEME',
 }
 
 export type TimerActionModel =
@@ -17,5 +18,6 @@ export type TimerActionModel =
       type:
         | TimerActionType.PAUSE_TIME
         | TimerActionType.PLAY_TIME
-        | TimerActionType.UPDATE_TIME;
+        | TimerActionType.UPDATE_TIME
+        | TimerActionType.BG_THEME;
     };

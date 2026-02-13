@@ -26,6 +26,10 @@ export function TimerContextProvider({ children }: TimerContextProviderProps) {
     return () => window.clearInterval(interval);
   }, [state]);
 
+  useEffect(() => {
+    dispatch({ type: TimerActionType.BG_THEME });
+  });
+
   return (
     <TimerContext.Provider value={{ state, dispatch }}>{children}</TimerContext.Provider>
   );

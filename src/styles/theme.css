@@ -63,6 +63,27 @@
   /* Default link themes */
   --link-color: #e6e9f0;
 }
+/* Dark work theme */
+:root[data-theme='dark-work'] {
+  /* Background color */
+  --bg-default: var(--yellow-950);
+  /* Components color */
+  --theme-soft: var(--yellow-800);
+  --theme-strong: var(--yellow-600);
+  /* Text color */
+  --text-default: var(--yellow-100);
+  /* Component fill */
+}
+/* Light work theme */
+:root[data-theme='light-work'] {
+  /* Background color */
+  --bg-default: var(--yellow-200);
+  /* Components color */
+  --theme-soft: var(--yellow-300);
+  --theme-strong: var(--yellow-600);
+  /* Text color */
+  --text-default: var(--yellow-950);
+}
 
 :root[data-theme='light'] {
   /* Focus light theme */
