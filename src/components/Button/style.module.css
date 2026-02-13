@@ -8,16 +8,16 @@
 .primary {
   padding: clamp(1rem, 1.5vw, 1.6rem) clamp(2rem, 3vw, 2.8rem);
   margin-top: -3em;
-  color: var(--gray-100);
-  background-color: var(--gray-600);
+  color: var(--text-default);
+  background-color: var(--theme-strong);
   border-radius: clamp(0.8rem, 1.5vw, 1.6rem);
 }
 
 .secondary {
   padding: clamp(0.6rem, 1.5vw, 1.2rem) clamp(1.6rem, 3vw, 2.4rem);
   margin-top: -3em;
-  color: var(--gray-200);
-  background-color: var(--gray-800);
+  color: var(--text-default);
+  background-color: var(--theme-soft);
   border-radius: clamp(0.8rem, 1.5vw, 1.6rem);
 }
 

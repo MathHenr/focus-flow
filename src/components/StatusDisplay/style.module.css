@@ -1,9 +1,3 @@
-/* .container-contet {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 .content {
   margin-top: 3.2rem;
   display: inline-flex;
@@ -11,8 +5,8 @@
   gap: 0.8rem;
   padding: 0.6rem 1.2rem;
   border-radius: 2.4rem;
-  background: var(--gray-900);
-  border: 0.2rem solid var(--gray-100);
+  background: var(--theme-soft);
+  border: 0.2rem solid var(--text-default);
   color: var(--text-default);
 }
 

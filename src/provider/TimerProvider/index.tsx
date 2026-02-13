@@ -16,6 +16,10 @@ type TimerContextProviderProps = {
 export function TimerContextProvider({ children }: TimerContextProviderProps) {
   const [state, dispatch] = useReducer(timerReducer, initTimerState);
 
+  // useEffect(() => {
+  //   dispatch({ type: TimerActionType.BG_THEME });
+  // }, [state.cycle]);
+
   useEffect(() => {
     console.log(state);
     // Count Down logic
@@ -25,10 +29,6 @@ export function TimerContextProvider({ children }: TimerContextProviderProps) {
     }, 1000);
     return () => window.clearInterval(interval);
   }, [state]);
-
-  useEffect(() => {
-    dispatch({ type: TimerActionType.BG_THEME });
-  }, [state.cycle]);
 
   return (
     <TimerContext.Provider value={{ state, dispatch }}>{children}</TimerContext.Provider>

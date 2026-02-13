@@ -52,13 +52,16 @@
   --gray-900: #0a0f1a;
   --gray-950: #05070c;
 
+  /* Background default */
+  --bg-default: var(--gray-950);
+
   /* Standard pop-up themes */
   --success: #22c55e;
   --warning: #eab308;
   --error: #991b1b;
 
   /* Text default color */
-  --text-default: #e6e9f0;
+  --text-default: var(--gray-050);
 
   /* Default link themes */
   --link-color: #e6e9f0;
@@ -76,12 +79,13 @@
   /* Default link themes */
   --link-color: #e6e9f0;
 }
+
 /* Light work theme */
 :root[data-theme='light-work'] {
   /* Background color */
-  --bg-default: var(--yellow-200);
+  --bg-default: var(--yellow-050);
   /* Components color */
-  --theme-soft: var(--yellow-300);
+  --theme-soft: var(--yellow-200);
   --theme-strong: var(--yellow-600);
   /* Text color */
   --text-default: var(--yellow-950);
