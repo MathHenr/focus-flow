@@ -16,9 +16,9 @@ type TimerContextProviderProps = {
 export function TimerContextProvider({ children }: TimerContextProviderProps) {
   const [state, dispatch] = useReducer(timerReducer, initTimerState);
 
-  // useEffect(() => {
-  //   dispatch({ type: TimerActionType.BG_THEME });
-  // }, [state.cycle]);
+  useEffect(() => {
+    dispatch({ type: TimerActionType.BG_THEME });
+  }, [state.cycle]);
 
   useEffect(() => {
     console.log(state);

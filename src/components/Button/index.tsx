@@ -20,7 +20,6 @@ export function Button({ icon: Icon, variant, handleClick }: ButtonProps) {
     '--text-default'
   );
 
-  console.log(Icon);
   return (
     <button
       onClick={handleClick}

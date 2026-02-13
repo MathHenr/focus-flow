@@ -11,9 +11,6 @@ export function timerReducer(
       const secondsRemaining = action.payload.duration * 60;
       const cycle = getCycle(state.cycle);
 
-      if (state.tasks.length < 1) return state;
-      document.documentElement.setAttribute('data-theme', 'light-work');
-
       return {
         ...state,
         secondsRemaining,
