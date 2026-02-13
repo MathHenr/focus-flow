@@ -18,14 +18,14 @@ export function Timer() {
     <div className={style.timer}>
       {!state.isActive && (
         <>
-          <span className={style.paused}>{minutes}</span>
-          <span className={style.paused}>{seconds}</span>
+          <span>{minutes}</span>
+          <span>{seconds}</span>
         </>
       )}
       {!!state.isActive && (
         <>
-          <span>{minutes}</span>
-          <span>{seconds}</span>
+          <span className={style.paused}>{minutes}</span>
+          <span className={style.paused}>{seconds}</span>
         </>
       )}
     </div>
