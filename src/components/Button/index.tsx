@@ -6,11 +6,11 @@ import type { LucideIcon } from 'lucide-react';
 
 type ButtonProps = {
   icon: LucideIcon;
-  handleClick: React.MouseEventHandler<HTMLButtonElement>;
+  handleClick?: React.MouseEventHandler<HTMLButtonElement>;
   variant: 'primary' | 'secondary';
-};
+} & React.ComponentProps<'button'>;
 
-export function Button({ icon: Icon, variant, handleClick }: ButtonProps) {
+export function Button({ icon: Icon, variant, handleClick, ...rest }: ButtonProps) {
   const buttonVariant = {
     primary: 'primary',
     secondary: 'secondary',
@@ -20,6 +20,7 @@ export function Button({ icon: Icon, variant, handleClick }: ButtonProps) {
     <button
       onClick={handleClick}
       className={`${style.button} ${style[buttonVariant[variant]]}`}
+      {...rest}
     >
       <Icon fill="currentColor" />
     </button>

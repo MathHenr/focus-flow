@@ -7,7 +7,7 @@ import { changeIsActive } from '../../utils/changeIsActive';
 import { nextFunction } from '../../utils/nextCycle';
 
 // Lucide import
-import { ChevronsRightIcon, EllipsisIcon, PauseIcon, PlayIcon } from 'lucide-react';
+import { ChevronsRightIcon, PauseIcon, PlayIcon } from 'lucide-react';
 
 // component import
 import { Container } from '../../components/Container';
@@ -20,10 +20,6 @@ import { SettingsButton } from '../../components/SettingsButton';
 
 export function Main() {
   const { state, dispatch } = useTimerContext();
-
-  function handleClick() {
-    return;
-  }
 
   const startTimer = (): void => {
     if (state.tasks.length < 1) {
@@ -52,9 +48,7 @@ export function Main() {
         <Timer />
       </Container>
       <Container>
-        <SettingsButton>
-          <Button handleClick={handleClick} variant="secondary" icon={EllipsisIcon} />
-        </SettingsButton>
+        <SettingsButton />
         {!state.isActive && (
           <Button
             key={'start'}
