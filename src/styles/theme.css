@@ -2,7 +2,7 @@
 :root {
   /* Focus dark theme */
   --yellow-050: #fffef5;
-  --yellow-100: #fffcd6;
+  --yellow-100: #fffaba;
   --yellow-200: #fef08a;
   --yellow-300: #fde047;
   --yellow-400: #facc15;
@@ -13,7 +13,7 @@
   --yellow-900: #422006;
   --yellow-950: #150d00;
 
-  /* Shor break time dark theme */
+  /* Short break time dark theme */
   --green-050: #f2fff5;
   --green-100: #d9fae1;
   --green-200: #aaf0b9;
@@ -54,6 +54,9 @@
 
   /* Background default */
   --bg-default: var(--gray-950);
+  /* Components default */
+  --theme-soft: var(--gray-800);
+  --theme-strong: var(--gray-600);
 
   /* Standard pop-up themes */
   --success: #22c55e;
@@ -66,6 +69,7 @@
   /* Default link themes */
   --link-color: #e6e9f0;
 }
+
 /* Dark work theme */
 :root[data-theme='dark-work'] {
   /* Background color */
@@ -80,60 +84,77 @@
   --link-color: #e6e9f0;
 }
 
+/* Dark short break theme */
+:root[data-theme='dark-shortBreak'] {
+  /* Background color */
+  --bg-default: var(--green-950);
+  /* Components color */
+  --theme-soft: var(--green-800);
+  --theme-strong: var(--green-600);
+  /* Text color */
+  --text-default: var(--green-100);
+
+  /* Default link themes */
+  --link-color: #e6e9f0;
+}
+
+/* Dark long break theme */
+:root[data-theme='dark-longBreak'] {
+  /* Background color */
+  --bg-default: var(--blue-950);
+  /* Components color */
+  --theme-soft: var(--blue-800);
+  --theme-strong: var(--blue-600);
+  /* Text color */
+  --text-default: var(--blue-100);
+
+  /* Default link themes */
+  --link-color: #e6e9f0;
+}
+
 /* Light work theme */
 :root[data-theme='light-work'] {
   /* Background color */
   --bg-default: var(--yellow-050);
   /* Components color */
-  --theme-soft: var(--yellow-200);
-  --theme-strong: var(--yellow-600);
+  --theme-soft: var(--yellow-100);
+  --theme-strong: var(--yellow-500);
   /* Text color */
-  --text-default: var(--yellow-950);
+  --text-default: var(--yellow-900);
+
+  /* Default link themes */
+  --link-color: #05070c;
+}
+
+/* Light short break theme */
+:root[data-theme='light-shortBreak'] {
+  /* Background color */
+  --bg-default: var(--green-050);
+  /* Components color */
+  --theme-soft: var(--green-100);
+  --theme-strong: var(--green-500);
+  /* Text color */
+  --text-default: var(--green-900);
+
+  /* Default link themes */
+  --link-color: #05070c;
+}
+
+/* Light long break theme */
+:root[data-theme='light-longBreak'] {
+  /* Background color */
+  --bg-default: var(--blue-050);
+  /* Components color */
+  --theme-soft: var(--blue-100);
+  --theme-strong: var(--blue-500);
+  /* Text color */
+  --text-default: var(--blue-900);
 
   /* Default link themes */
   --link-color: #05070c;
 }
 
 :root[data-theme='light'] {
-  /* Focus light theme */
-  --yellow-050: #150d00;
-  --yellow-100: #422006;
-  --yellow-200: #854d0e;
-  --yellow-300: #a16207;
-  --yellow-400: #ca8a04;
-  --yellow-500: #eab308;
-  --yellow-600: #facc15;
-  --yellow-700: #fde047;
-  --yellow-800: #fef08a;
-  --yellow-900: #fef9c3;
-  --yellow-950: #fffef5;
-
-  /* Short break time light theme */
-  --green-050: #040d06;
-  --green-100: #14401d;
-  --green-200: #216630;
-  --green-300: #2e8c43;
-  --green-400: #3db257;
-  --green-500: #4dda6c;
-  --green-600: #69e084;
-  --green-700: #89e89e;
-  --green-800: #aaf0b9;
-  --green-900: #d9fae1;
-  --green-950: #f2fff5;
-
-  /* Long break time light theme */
-  --blue-050: #04090d;
-  --blue-100: #153047;
-  --blue-200: #234f75;
-  --blue-300: #316ea3;
-  --blue-400: #3f8dd1;
-  --blue-500: #4cacff;
-  --blue-600: #6ebbff;
-  --blue-700: #8fcbff;
-  --blue-800: #b0daff;
-  --blue-900: #d9eeff;
-  --blue-950: #f2f9ff;
-
   /* Standard light theme */
   --gray-050: #05070c;
   --gray-100: #0a0f1a;
@@ -147,7 +168,14 @@
   --gray-900: #e6e9f0;
   --gray-950: #f3f7ff;
 
-  --text-default: #05070c;
+  /* Background default */
+  --bg-default: var(--gray-950);
+  /* Components default */
+  --theme-soft: var(--gray-800);
+  --theme-strong: var(--gray-600);
+
+  /* Text default color */
+  --text-default: var(--gray-050);
 
   --link-color: #05070c;
 }

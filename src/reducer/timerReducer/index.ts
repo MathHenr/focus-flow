@@ -1,11 +1,14 @@
 import { TimerActionType, type TimerActionModel } from '../../models/TimerActionModel';
 import type { TimerStateModel } from '../../models/TimerStateModel';
 import { getCycle } from '../../utils/getCycle';
+import { getCycleType } from '../../utils/getCycleType';
 
 export function timerReducer(
   state: TimerStateModel,
   action: TimerActionModel
 ): TimerStateModel {
+  type Theme = 'dark' | 'light';
+
   switch (action.type) {
     case TimerActionType.START_TIME: {
       const secondsRemaining = action.payload.duration * 60;
@@ -50,7 +53,13 @@ export function timerReducer(
     }
     case TimerActionType.BG_THEME: {
       if (state.tasks.length < 1) return state;
-      document.documentElement.setAttribute('data-theme', 'light-work');
+      // Catch the main theme: dark | light
+      const currentTheme = (localStorage.getItem('theme') as Theme) || 'light';
+
+      // Change theme according to cycle type
+      const type = getCycleType(state.cycle);
+
+      document.documentElement.setAttribute('data-theme', `${currentTheme}-${type}`);
       return state;
     }
   }
