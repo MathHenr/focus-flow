@@ -7,7 +7,7 @@ import style from './style.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Lucide import
-import { BrainIcon, CoffeeIcon } from 'lucide-react';
+import { BrainIcon, Clock4Icon, CoffeeIcon } from 'lucide-react';
 
 export function StatusDisplay() {
   const { state } = useTimerContext();
@@ -22,8 +22,8 @@ export function StatusDisplay() {
           exit={{ y: 10, opacity: 0 }}
           transition={{ duration: 0.2 }}
         >
-          <BrainIcon />
-          <p>Focus</p>
+          <Clock4Icon />
+          <p>Chronos</p>
         </motion.div>
       ) : (
         <>
