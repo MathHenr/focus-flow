@@ -1,6 +1,7 @@
+// import react hook
+import { useEffect, useState } from 'react';
 // import style
 import style from './style.module.css';
-
 // import radix component
 import { Popover, Switch } from 'radix-ui';
 // import component
@@ -8,7 +9,26 @@ import { Button } from '../Button';
 // import lucide icon
 import { EllipsisIcon } from 'lucide-react';
 
+type Theme = 'dark' | 'light';
+
 export function SettingsButton() {
+  const [theme, setTheme] = useState<Theme>(() => {
+    const currentTheme = (localStorage.getItem('theme') as Theme) || 'light';
+    return currentTheme;
+  });
+
+  const themeChange = (event: boolean): void => {
+    setTheme(() => {
+      return event ? 'dark' : 'light';
+    });
+    return;
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
@@ -22,7 +42,12 @@ export function SettingsButton() {
               <label className={style.label} htmlFor="">
                 Dark mode
               </label>
-              <Switch.Root className={style['switch-root']} id="theme-switch">
+              <Switch.Root
+                onCheckedChange={themeChange}
+                checked={theme === 'light' ? false : true}
+                className={style['switch-root']}
+                id="theme-switch"
+              >
                 <Switch.Thumb className={style['switch-thumb']} />
               </Switch.Root>
             </fieldset>

@@ -52,16 +52,18 @@
   --gray-900: #0a0f1a;
   --gray-950: #05070c;
 
+  /* Standard pop-up themes */
+  --success: #22c55e;
+  --warning: #eab308;
+  --error: #991b1b;
+}
+
+:root[data-theme='dark'] {
   /* Background default */
   --bg-default: var(--gray-950);
   /* Components default */
   --theme-soft: var(--gray-800);
   --theme-strong: var(--gray-600);
-
-  /* Standard pop-up themes */
-  --success: #22c55e;
-  --warning: #eab308;
-  --error: #991b1b;
 
   /* Text default color */
   --text-default: var(--gray-050);
