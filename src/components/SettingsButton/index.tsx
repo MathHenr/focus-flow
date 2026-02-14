@@ -114,7 +114,7 @@ export function SettingsButton() {
               />
             </fieldset>
           </div>
-          <Popover.Arrow fill="var(--bg-default)" />
+          <Popover.Arrow fill="var(--theme-soft)" />
         </Popover.Content>
       </Popover.Portal>
     </Popover.Root>
