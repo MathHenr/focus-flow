@@ -1,0 +1,77 @@
+.content {
+  width: clamp(20rem, 50vw, 26rem);
+  padding: 1.4rem 1rem;
+  background-color: var(--theme-soft);
+  border-radius: 1.2rem;
+  -webkit-box-shadow: 0rem 0rem 0.6rem 0rem #000000;
+  box-shadow: 0rem 0rem 0.6rem 0rem #000000;
+}
+
+.popover-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.popover-container p {
+  font-weight: bolder;
+  color: var(--text-default);
+  margin-bottom: 0.8rem;
+}
+
+.fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  gap: 2rem;
+  margin: 0.4rem;
+}
+
+.label {
+  color: var(--text-default);
+  font-size: 1rem;
+}
+
+.switch-root {
+  all: unset;
+  width: 2.4rem;
+  height: 1.5rem;
+  border-radius: 8rem;
+  border: none;
+  background-color: var(--gray-200);
+  -webkit-box-shadow: 0rem 0rem 0.1rem 0rem #000000;
+  box-shadow: 0rem 0rem 0.1rem 0rem #000000;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  &[data-state='checked'] {
+    background-color: var(--gray-400);
+  }
+}
+
+.switch-thumb {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--gray-950);
+  border-radius: 8rem;
+  transition: transform 100ms;
+  transform: translateX(0.2rem);
+  transition: all 0.1s ease-in-out;
+  will-change: transform;
+  &[data-state='checked'] {
+    transform: translateX(1rem);
+  }
+}
+
+.input {
+  width: 5rem;
+  height: 2rem;
+  border: 0.1rem solid var(--gray-050);
+  background: var(--theme-soft);
+  border-radius: 0.4rem;
+  outline: none;
+  padding: 0.4rem;
+  text-align: center;
+  color: var(--text-default);
+}

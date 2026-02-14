@@ -62,6 +62,16 @@ export function timerReducer(
       document.documentElement.setAttribute('data-theme', `${currentTheme}-${type}`);
       return state;
     }
+    case TimerActionType.SETUP_TIME: {
+      return {
+        ...state,
+        config: {
+          work: action.payload.work,
+          shortBreak: action.payload.shortBreak,
+          longBreak: action.payload.longBreak,
+        },
+      };
+    }
   }
 
   return state;
