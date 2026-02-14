@@ -21,7 +21,6 @@ export function TimerContextProvider({ children }: TimerContextProviderProps) {
   }, [state.cycle]);
 
   useEffect(() => {
-    console.log(state);
     // Count Down logic
     if (!state.isActive) return;
     const interval = window.setInterval(() => {
