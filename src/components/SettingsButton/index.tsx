@@ -59,7 +59,7 @@ export function SettingsButton() {
         <Button variant="secondary" icon={EllipsisIcon} />
       </Popover.Trigger>
       <Popover.Portal>
-        <Popover.Content side="top" className={style.content} sideOffset={5}>
+        <Popover.Content className={style.content} sideOffset={5}>
           <div className={style['popover-container']}>
             <p>Settings</p>
             <fieldset className={style.fieldset}>
