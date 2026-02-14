@@ -2,6 +2,9 @@
 import { useEffect, useState } from 'react';
 // import timer context
 import { useTimerContext } from '../../hooks/useTimerContext';
+// import type
+import { TimerActionType } from '../../models/TimerActionModel';
+import type { TimerStateModel } from '../../models/TimerStateModel';
 // import style
 import style from './style.module.css';
 // import radix component
@@ -9,9 +12,7 @@ import { Popover, Switch } from 'radix-ui';
 // import component
 import { Button } from '../Button';
 // import lucide icon
-import { EllipsisIcon } from 'lucide-react';
-import { TimerActionType } from '../../models/TimerActionModel';
-import type { TimerStateModel } from '../../models/TimerStateModel';
+import { EllipsisIcon, XIcon } from 'lucide-react';
 
 type Theme = 'dark' | 'light';
 
@@ -114,7 +115,10 @@ export function SettingsButton() {
               />
             </fieldset>
           </div>
-          <Popover.Arrow fill="var(--bg-default)" />
+          <Popover.Close className={style.close}>
+            <XIcon />
+          </Popover.Close>
+          <Popover.Arrow fill="var(--theme-soft)" />
         </Popover.Content>
       </Popover.Portal>
     </Popover.Root>
